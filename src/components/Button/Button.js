@@ -256,7 +256,7 @@ function Button({
         border: ${border};
         box-shadow: ${disabled || shadowColor === undefined
           ? 'none'
-          : '0 0 19px rgba(47, 212, 122, 0.47)'};
+          : '0 0 19px rgba(95, 46, 234, 0.47)'};
         transition-property: transform, box-shadow;
         transition-duration: 50ms;
         transition-timing-function: ease-in-out;

@@ -107,4 +107,4 @@ export {
   IconWrite,
   IconZoomIn,
   IconZoomOut,
-} from "@narwhalosaurus/ui"
+} from "@aragon/ui"
