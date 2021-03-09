@@ -1,0 +1,44 @@
+{
+  "name": "devbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run prebuild && webpack --mode production && npm run postbuild",
+    "build:dev": "npm run prebuild && webpack --mode development && npm run postbuild",
+    "check:link": "node scripts/check-link",
+    "postbuild": "copy-aragon-ui-assets dist",
+    "prebuild": "copy-aragon-ui-assets dist && npm run update-apps-index",
+    "start": "npm run check:link && npm run prebuild && webpack-dev-server --mode development --port 1234",
+    "start:a11y-check": "npm run check:link && npm run prebuild && webpack-dev-server --mode development --port 1234 --env.A11Y_CHECK=on",
+    "update-apps-index": "node scripts/update-apps-index"
+  },
+  "dependencies": {
+    "@narwhalosaurus/ui": "file:..",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "seedrandom": "^3.0.5",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "react-axe": "^3.3.0",
+    "symlinked": "^0.5.0",
+    "terser-webpack-plugin": "^2.3.2",
+    "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "resolutions": {
+    "webpack/micromatch/snapdragon/base/cache-base/set-value": "^2.0.1"
+  }
+}

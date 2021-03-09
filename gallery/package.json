@@ -1,0 +1,40 @@
+{
+  "name": "aragon-ui-gallery",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aragon/ui": "file:..",
+    "history": "^4.10.1",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-link-attributes": "^3.0.0",
+    "prismjs": "^1.21.0",
+    "prop-types": "^15.7.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production && npm run copy-assets",
+    "copy-assets": "../bin/copy-aragon-ui-assets -n aragon-ui ./dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "terser-webpack-plugin": "^2.3.1",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
